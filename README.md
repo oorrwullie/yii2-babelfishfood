@@ -150,7 +150,7 @@ To compile translations into po files run:
 To use the widget in a view:
 
 ```php
-<?= \oorrwullie\babelfishfood\AutoloadExample::widget(); ?>
+<?= \oorrwullie\babelfishfood\BFF::widget(); ?>
 ```
 
 
