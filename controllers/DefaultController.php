@@ -3,8 +3,8 @@
 namespace oorrwullie\babelfishfood\controllers;
 
 use Yii;
-use common\modules\babelfishfood\models\Languages;
-use common\modules\babelfishfood\models\LanguagesSearch;
+use oorrwullie\babelfishfood\models\Languages;
+use oorrwullie\babelfishfood\models\LanguagesSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
