@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model oorrwullie\babelfishfood\models\Languages */
 
-$this->title = $model->lang_id;
+$this->title = $model->lang_name;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('global', 'Languages'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -28,11 +28,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'lang_id',
+  //          'lang_id',
             'lang_name',
             'native_name',
             'lang_code',
-            'active',
+            'active:boolean',
         ],
     ]) ?>
 

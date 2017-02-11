@@ -12,13 +12,13 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'lang_name')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'lang_name')->textInput(['maxlength' => true, 'style' => 'max-width:400px']) ?>
 
-    <?= $form->field($model, 'native_name')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'native_name')->textInput(['maxlength' => true, 'style' => 'max-width:400px']) ?>
 
-    <?= $form->field($model, 'lang_code')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'lang_code')->textInput(['maxlength' => true, 'style' => 'max-width:400px']) ?>
 
-    <?= $form->field($model, 'active')->textInput() ?>
+    <?= $form->field($model, 'active')->checkBox() ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? Yii::t('global', 'Create') : Yii::t('global', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
