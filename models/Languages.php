@@ -1,6 +1,6 @@
 <?php
 
-namespace common\modules\babelfishfood\models;
+namespace oorrwullie\babelfishfood\models;
 
 use Yii;
 use yii\db\ActiveRecord;
