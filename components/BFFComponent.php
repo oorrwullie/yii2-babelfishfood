@@ -26,7 +26,7 @@ use oorrwullie\babelfishfood\models\Languages;
  *          'expireDays' => 64,                             // The expiration time of the cookie is 64 days.
  *          'callback' => function() {
  *              if (!\Yii::$app->user->isGuest) {
- *                  $user = User::findOne(\Yii::$app->user->id);
+ *                  $user = \Yii::$app->user->identity;
  *                  $user->language = \Yii::$app->language;
  *                  $user->save();
  *              }
@@ -107,7 +107,7 @@ class BFFComponent extends Component {
 
         if (isset($_GET['babelFishFood'])) {
             if ($this->_isValidLanguage($_GET['babelFishFood'])) {
-                return $this->saveLanguage($_GET['bebelFishFood']);
+                return $this->saveLanguage($_GET['babelFishFood']);
             } else if (!Yii::$app->request->isAjax) {
                 return $this->_redirect();
             }

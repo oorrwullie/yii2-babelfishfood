@@ -61,7 +61,7 @@ Configure the component in common/config/main.php:
 	'expireDays' => 64,                             // The expiration time of the cookie is 64 days.
 	'callback' => function() {
 	    if (!\Yii::$app->user->isGuest) {
-		$user = User::findOne(\Yii::$app->user->id);
+		$user = \Yii::$app->user->identity;
 		$user->language = \Yii::$app->language;
 		$user->save();
 	    }

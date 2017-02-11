@@ -78,7 +78,7 @@ class Languages extends ActiveRecord {
 	$languages = array();
 	$query[] = (new Query())
 	    ->select('native_name `name`, lang_code `id`')
-	    ->from('lang')
+	    ->from('languages')
 	    ->where(['active' => '1'])
 	    ->orderBy('id')
 	    ->all();
@@ -90,7 +90,7 @@ class Languages extends ActiveRecord {
     public static function getCurrentLanguage($current_id) {
 	$query[] = (new Query())
 	    ->select('native_name `name`')
-	    ->from('lang')
+	    ->from('languages')
 	    ->where(['lang_code' => $current_id])
 	    ->one();
 	$language = $query[0]['name'];
@@ -101,7 +101,7 @@ class Languages extends ActiveRecord {
     public static function getI18n() {
 	$query[] = (new Query())
 	    ->select('lang_code `id`')
-	    ->from('lang')
+	    ->from('languages')
 	    ->where(['active' => '1'])
 	    ->all();
 	foreach ($query[0] as $q) {
@@ -114,7 +114,7 @@ class Languages extends ActiveRecord {
     public static function getLPL() {
 	$query[] = (new Query())
 	    ->select('lang_code `id`, native_name `name`')
-	    ->from('lang')
+	    ->from('languages')
 	    ->where(['active' => '1'])
 	    ->orderBy('id')
 	    ->all();
