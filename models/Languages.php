@@ -43,11 +43,11 @@ class Languages extends ActiveRecord {
     public function attributeLabels() {
 
 	return [
-	    'lang_id' => 'ID',
-	    'lang_name' => 'Name',
-	    'native_name' => 'Native Name',
-	    'lang_code' => 'ISO Code',
-	    'active' => 'Active',
+	    'lang_id' => Yii::t('global', 'ID'),
+	    'lang_name' => Yii::t('global', 'Name'),
+	    'native_name' => Yii::t('global', 'Native Name'),
+	    'lang_code' => Yii::t('global', 'ISO Code'),
+	    'active' => Yii::t('global', 'Active'),
 	];
     }
 
