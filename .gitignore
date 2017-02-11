@@ -1,0 +1,16 @@
+.DS_Store
+*.swp
+composer.phar
+composer.lock
+frontend/web/error_log
+.htaccess
+/yii
+.idea
+nbproject
+.buildpath
+.project
+.settings
+Thumbs.db
+/vendor
+phpunit.phar
+/phpunit.xml

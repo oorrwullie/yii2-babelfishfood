@@ -1,0 +1,21 @@
+{
+    "name": "oorrwullie/yii2-babelfishfood",
+    "description": "Language switching companion of the Yii2 Babelfish symbiote",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","i18n","babelfish","widget","translation","language"],
+    "license": "MIT",
+    "authors": [
+	{
+	    "name": "Kevin Payne",
+	    "email": "payneks@gmail.com"
+	}
+    ],
+    "require": {
+	"yiisoft/yii2": "*"
+    },
+    "autoload": {
+	"psr-4": {
+	    "oorrwullie\\babelfishfood\\": ""
+	}
+    }
+}
