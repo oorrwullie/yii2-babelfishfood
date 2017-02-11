@@ -140,10 +140,16 @@ echo \Yii::t('app', 'This is a string to translate!');
 ```
 
 
-To compile translations into po files run:
+To compile translations into po files, navigate to your project toot and run:
 
 ```bash
 ./yii message/extract @oorrwullie/babelfishfood/config/i18n.php
+```
+
+There is a bash script in oorrwullie/yii2-babelfishfood called i18n. You can copy that to your project root and update translations by running:
+
+```bash
+./i18n
 ```
 
 
