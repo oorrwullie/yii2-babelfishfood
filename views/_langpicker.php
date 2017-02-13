@@ -7,10 +7,10 @@
 ?>
 
 
-    <div class="lang-form">
-	<form class="market_form" id="language-form" action='<?= $url ?>' method="get">
+    <div class="lang-form-contain">
+	<form class="lang_form" id="language-form" action='<?= $url ?>' method="get">
 	    <?= $title ?>
-	    <select class="market-options" id="language-change" name="babelFishFood" onchange="this.form.submit()">
+	    <select class="language-options" id="language-change" name="babelFishFood" onchange="this.form.submit()">
 		<?php 
 		    foreach ($languages as $language) {
 			if ($language['name'] == $current_language) {

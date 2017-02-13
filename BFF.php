@@ -14,13 +14,13 @@ class BFF extends Widget {
 	/**
 	 * Custom title for the drop down menu
 	 **/
-    public $title;
+    public $label;
 
     public function init() {
 
 	parent::init();
-	if ($this->title === null) {
-	    $this->title = Yii::t('global', 'Language') . ': ';
+	if ($this->label === null) {
+	    $this->label = Yii::t('global', 'Language') . ': ';
 	}
     }
 
