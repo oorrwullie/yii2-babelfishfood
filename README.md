@@ -43,7 +43,7 @@ Once the extension is installed :
 Create the languages table and add language column to your database:
 
 ```bash
-php yii migrate --migrationPath=@oorrwullie/yii2-babelfishfood/migrations
+php yii migrate --migrationPath=@vendor/oorrwullie/yii2-babelfishfood/migrations
 ```
 
 You select supported languages using the active column for that language in the database.
