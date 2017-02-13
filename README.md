@@ -120,7 +120,7 @@ To use the built-in CRUD to administrate langugaes add the following to backend/
 
 ```php
 'modules' => [
-    'bbf' => [
+    'bff' => [
 	'class' => 'oorrwullie\babelfishfood\BabelFishFood',
     ],
 ],
