@@ -42,7 +42,7 @@ class BFF extends Widget {
 	}
 
 	return $this->render('_langpicker', [
-	    'title' => $this->title,
+	    'label' => $this->label,
 	    'languages' => $languages,
 	    'current_language' => $current_language,
 	    'url' => $url,
