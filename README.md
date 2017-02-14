@@ -159,6 +159,16 @@ To use the widget in a view:
 <?= \oorrwullie\babelfishfood\BFF::widget(); ?>
 ```
 
+You can change the label of the dropdown widget (defaults to "Languages: ") and languages can either be normal or uppercase (defaults to uppercase).
+For example:
+
+```php
+<?= \oorrwullie\babelfishfood\BFF::widget([
+    'upperCase' => FALSE,
+    'label' => '<i class="fa fa-language"></i>',
+]); ?>
+```
+
 
 To use the CRUD:
 

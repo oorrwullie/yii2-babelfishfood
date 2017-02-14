@@ -43,7 +43,7 @@ use oorrwullie\babelfishfood\models\Languages;
  * 'bootstrap' => ['babelfishfood'],
  * ~~~
  *
- * @BabelFishFood is based on languagepicker by 
+ * @BFFComponent is a modified version of the yii2-languagepicker component by 
  * @Molnar <lajax.m@gmail.com>
  */
 class BFFComponent extends Component {
@@ -129,7 +129,6 @@ class BFFComponent extends Component {
      * @return static
      */
     public function saveLanguage($language) {
-
         Yii::$app->language = $language;
         $this->saveLanguageIntoCookie($language);
 
@@ -175,6 +174,17 @@ class BFFComponent extends Component {
                 Yii::$app->language = $language;
                 $this->saveLanguageIntoCookie($language);
                 return;
+            }
+	}
+
+        foreach ($acceptableLanguages as $language) {
+            $pattern = preg_quote(substr($language, 0, 2), '/');
+            foreach ($this->languages as $key => $value) {
+                if (preg_match('/^' . $pattern . '/', $value) || preg_match('/^' . $pattern . '/', $key)) {
+		    Yii::$app->language = $this->_isValidLanguage($key) ? $key : $value;
+                    $this->saveLanguageIntoCookie(Yii::$app->language);
+                    return;
+                }
             }
         }
     }
