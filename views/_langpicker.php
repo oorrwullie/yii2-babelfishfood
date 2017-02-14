@@ -9,7 +9,7 @@
 
     <div class="lang-form-contain">
 	<form class="lang_form" id="language-form" action='<?= $url ?>' method="get">
-	    <?= $title ?>
+	    <?= $label ?>
 	    <select class="language-options" id="language-change" name="babelFishFood" onchange="this.form.submit()">
 		<?php 
 		    foreach ($languages as $language) {
