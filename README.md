@@ -116,7 +116,7 @@ in common/config/main.php
 ```
 
 
-To use the built-in CRUD to administrate langugaes add the following to backend/config/main.php:
+To use the built-in CRUD to administrate languages, add the following to backend/config/main.php:
 
 ```php
 'modules' => [
@@ -146,7 +146,7 @@ To compile translations into po files, navigate to your project toot and run:
 ./yii message/extract @oorrwullie/babelfishfood/config/i18n.php
 ```
 
-There is a bash script in oorrwullie/yii2-babelfishfood called i18n. You can copy that to your project root and update translations by running:
+The above command is a bit long. There is a bash script in oorrwullie/yii2-babelfishfood named i18n. You can copy that to your project root and update translations by running:
 
 ```bash
 ./i18n
