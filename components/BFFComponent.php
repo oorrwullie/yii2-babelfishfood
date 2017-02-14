@@ -22,7 +22,6 @@ use oorrwullie\babelfishfood\models\Languages;
  *      'babelfishfood' => [
  *          'class' => 'oorrwullie\babelfishfood\components\BFFComponent',
  *          'cookieName' => 'language',                     // Name of the cookie.
- *          'cookieDomain' => 'example.com',                // Domain of the cookie.
  *          'expireDays' => 64,                             // The expiration time of the cookie is 64 days.
  *          'callback' => function() {
  *              if (!\Yii::$app->user->isGuest) {
