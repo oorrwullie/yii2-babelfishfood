@@ -46,7 +46,7 @@ Create the languages table and add language column to your database:
 php yii migrate --migrationPath=@vendor/oorrwullie/yii2-babelfishfood/migrations
 ```
 
-You select supported languages using the active column for that language in the database.
+You select supported languages using the active column for that language in the database. We recommend writing a migration to update your active languages, and turn off any of the default that you are not using.
 
 
 Configure the component in common/config/main.php:
