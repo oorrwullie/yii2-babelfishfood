@@ -57,6 +57,7 @@ Configure the component in common/config/main.php:
     'babelfishfood' => [
 	'class' => 'oorrwullie\babelfishfood\components\BFFComponent',
 	'cookieName' => 'language',                     // Name of the cookie.
+	'cookieDomain' => 'example.com',                // Domain of the cookie.
 	'expireDays' => 64,                             // The expiration time of the cookie is 64 days.
 	'callback' => function() {
 	    if (!\Yii::$app->user->isGuest) {
@@ -84,7 +85,7 @@ Do the same in the backend if you would like to have the switcher there too.
 
 Configure translation extraction:
 
-The i18n section needs to be filled in similarly to this:
+The i18n section needs to be filled in like so:
 in common/config/main.php
 
 ```php

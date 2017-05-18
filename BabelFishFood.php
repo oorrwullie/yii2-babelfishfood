@@ -15,8 +15,8 @@ class BabelFishFood extends \yii\base\Module
     /**
      * @inheritdoc
      */
-    public function init()
-    {
+    public function init() {
+
         parent::init();
 
     }
