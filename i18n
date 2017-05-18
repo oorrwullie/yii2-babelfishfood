@@ -1,3 +1,4 @@
 #!/bin/sh
 
-php ./yii message/extract @oorrwullie/babelfishfood/config/i18n.php
+php ./yii message/extract @oorrwullie/babelfishfood/config/i18n.php &&
+php ./yii i18n-merge
