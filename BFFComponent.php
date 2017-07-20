@@ -148,14 +148,14 @@ class BFFComponent extends Component {
      */
     public function detectLanguage() {
 
-	$userAgentLanguages = Yii::$app->getRequest()->getAcceptableLanguages();
+	if(!empty(Yii::$app->request->queryParams['lang'])) {
+	    $userAgentLanguages[] = Yii::$app->request->queryParams['lang'];
+	} else {
+	    $userAgentLanguages = Yii::$app->getRequest()->getAcceptableLanguages();
+	}
 
 	if(empty($userAgentLanguages)){
-	    if(!empty(Yii::$app->request->queryParams['lang'])) {
-		$userAgentLanguages[] = Yii::$app->request->queryParams['lang'];
-	    } else {
 		$userAgentLanguages[] = 'en';
-	    }
 	}
 
 	foreach ($userAgentLanguages as $language) {
