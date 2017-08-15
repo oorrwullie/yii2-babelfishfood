@@ -120,7 +120,7 @@ class BFFComponent extends Component {
             }
         }
 
-		$bot_agents = [null, 'Googlebot', 'Bingbot', 'Slurp', 'DuckDuckBot', 'Baiduspider', 'YandexBot', 'facebot'];
+		$bot_agents = [null, 'Googlebot', 'Bingbot', 'Slurp', 'DuckDuckBot', 'Baiduspider', 'YandexBot', 'facebot', 'insomnia/5.7.9'];
 		if(!in_array(Yii::$app->request->userAgent, $bot_agents)) {
         	$this->detectLanguage();
 		}
